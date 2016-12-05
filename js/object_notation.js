@@ -51,14 +51,14 @@ export function superKeyword() {
   console.log(cheese_sandwich.ingredients());
 }
 
-//just a nice feature to keep in mind
+//just a nice es5 feature to remember
 export function es5GetSet() {
   var hat = {
     __price: 1,
     get price() {return this.__price++},
-    set price(p) {this.__price = p;}
+    set price(p) {this.__price = p/2;}
   };
   console.log(hat.price, hat.price);
-  hat.price = 0;
+  hat.price = 2;
   console.log(hat.price, hat.price);
 }

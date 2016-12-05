@@ -52,7 +52,7 @@ export function varVsLetLoop2() {
     });
   }
 
-  console.log(fns[8](), fns[2]());//expect 8 2?
+  console.log(fns[8](), fns[2]());//expect 8 2
 }
 
 export function testVar() {
@@ -62,7 +62,7 @@ export function testVar() {
     return a;
   });
   a = 3;
-  return f[0];
+  return f[0];//expect 3
 }
 
 export function blockOverLocal() {
@@ -86,7 +86,7 @@ export function canModifyConstObject() {
   console.log(a.name);//modify
   //a = {};//not allowed
 }
-export function cannotRedeclareLet() {
+export function cannotMixDeclareKeywords() {
   var a = 1;
   //let a = 2;//error
 
